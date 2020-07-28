@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Veritabanı: `derskonu_wp742`
+-- Veritabanı: `2019-YKS`
 --
 
 -- --------------------------------------------------------
