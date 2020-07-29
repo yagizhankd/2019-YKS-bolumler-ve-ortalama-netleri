@@ -8,8 +8,7 @@ wb = load_workbook("sayisalUniVerileri.xlsx")
 ws = wb.active
 query="INSERT INTO netsayilari (bolumID, aytBiyoloji,aytKimya,aytMatematik,tytFen,tytSosyal,tytMatematik,tytTurkce) VALUES"
 for satir in range(1,ws.max_row+1):
-    for sutun in range(1,2):
-        bolumid = str(ws.cell(satir,sutun).value).replace('\t', '')
+    bolumid = str(ws.cell(satir,1).value).replace('\t', '')
     url = "https://yokatlas.yok.gov.tr/content/lisans-dynamic/1210a.php?y="+bolumid
     sayfa = urllib.request.urlopen(url)
     soup = BeautifulSoup(sayfa, "html.parser")
